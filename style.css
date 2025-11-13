@@ -1,0 +1,383 @@
+/* ==========================
+   General Styles
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* ==========================
+   Header
+========================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 80px;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  height: 100px;
+  max-height: 160px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: clamp(80px, 15vw, 130px);
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text h1 {
+  font-size: 28px;
+  color: #1f5c70;
+}
+
+.logo-text p {
+  font-size: 14px;
+  color: #1f5c70;
+  margin-top: -5px;
+}
+
+.search-bar {
+  width: 300px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+/* Search container */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-bar {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  flex: 1; /* makes input expand */
+}
+
+.search-btn {
+
+  color: #ffffff;
+  border: none;
+  padding: 2px 2px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background-color: #c2c2c2;
+}
+
+
+/* ==========================
+   Thick Outline (sa may header to hero at hero to featured books.)
+========================== */
+hr#thckoutline,
+hr#thckoutline-2 {
+  height: 20px;
+  background-color: #1f5c70;
+  border: none;
+  display: block;
+  margin: 0;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 80px 40px;
+  background: #f5fcff;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  margin-left: 40px;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.hero-text h2 {
+  font-size: 42px;
+  color: #1f5c70;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.hero-buttons a {
+  text-decoration: none; /* removes the underline */
+}
+
+
+.btn-primary {
+  background: #1f5c70;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #1f7a90;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #1f5c70;
+  border: 2px solid #1f5c70;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #1f5c70;
+  color: #fff;
+}
+
+.hero img {
+  flex: 1;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ==========================
+   Featured Books Section
+========================== */
+.featured-section {
+  text-align: center;
+  padding: 60px 8%;
+  background: #f9f9f9;
+}
+
+.featured-section h3 {
+  font-size: 26px;
+  margin-bottom: 40px;
+  color: #1f5c70;
+  letter-spacing: 1px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.book {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 250px;
+  text-decoration: none; 
+  color: inherit;
+}
+
+.book:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.book img {
+  width: 100%;
+  height: 280px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.book img:hover {
+  transform: scale(1.05);
+}
+
+.book h4 {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #333;
+  min-height: 40px;
+  text-transform: capitalize;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer {
+  background: #1f5c70;
+  color: #fff;
+  padding: 30px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-left {
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================
+   Social Buttons
+========================== */
+.socials {
+  display: flex;
+  gap: 1px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.social-btn img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.social-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ==========================
+   Responsive Styles
+========================== */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    max-height: none;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero img {
+    width: 450px;
+    height: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-section {
+    padding: 40px 20px;
+  }
+
+  .book-grid {
+    gap: 20px;
+  }
+
+  .book {
+    max-width: 200px;
+  }
+
+  .book img {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .book {
+    max-width: 160px;
+    padding: 10px;
+  }
+
+  .book img {
+    height: 200px;
+  }
+
+  .book h4 {
+    font-size: 14px;
+  }
+}
